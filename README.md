@@ -16,3 +16,5 @@ Limitations:
 1) The lock server keeps the connection open with the client proxy from when a file is opened until it is closed, to allow the thread to unlock and then lock the semaphore. This limits the number of files that can be opened at any one time to 5 (the number of threads in the lock server)
 
 2) The directory server maps filename => server:filename e.g. "file1" => "1:file1.txt". Each server acts as a directry (flat architecture). At the moment there is only one server and three files, so the server is always server 1. 
+
+3) Folder and file structure must be maintained- files must be called file1.txt, file2.txt and file3.txt and kept at the file system server.
